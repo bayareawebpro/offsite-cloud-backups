@@ -1,3 +1,4 @@
+# Script for Envoyer Snapshots
 #!/usr/bin/env bash
 # Database Name
 DB_STAGING=staging;
