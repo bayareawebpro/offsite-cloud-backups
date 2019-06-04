@@ -8,6 +8,7 @@ to a schedule.
 * Example Backup Script & LaunchAgent Template included in Documentation.
 * Tested with DigitalOcean (Ubuntu) Droplet & DigitalOcean Spaces & MacOS Mojave 10.14.5
 * Includes Per-Run Logging and Auto-Cleanup of old log files.
+* Uses MacOS Notification Center & Auto-Opens Logfile with Console.app.
 
 Copy the repo to your local home folder and rename it 
 "**BackupTool**".
