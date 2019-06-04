@@ -1,5 +1,5 @@
 # Backup Script
-LocalPath: `~/BackupTool/scripts/com.hostname.backup.sh`
+Copy to LocalPath: `~/BackupTool/scripts/com.hostname.backup.sh`
 
 This backup script declares the connections to use with RClone 
 (defined in previous step) and the source and destination paths.

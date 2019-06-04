@@ -6,7 +6,7 @@ Usage:
 ```
 
 ## Create a Launch Agent Source File (XML Below)
-LocalPath: `~/BackupTool/scripts/com.digitalocean.backup.xml`
+Copy to LocalPath: `~/BackupTool/scripts/com.digitalocean.backup.xml`
 
 The "Label" key needs to match the filename.
 **Customize the paths** in the provided template:
