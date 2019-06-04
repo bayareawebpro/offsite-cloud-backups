@@ -5,10 +5,10 @@ synchronization of remote servers to your home folder according
 to a schedule.
 
 * These Scripts are Designed for use with Mac OS (localhost).
-* Example Backup Script & LaunchAgent Template included in Documentation.
-* Tested with DigitalOcean (Ubuntu) Droplet & DigitalOcean Spaces & MacOS Mojave 10.14.5
 * Includes Per-Run Logging and Auto-Cleanup of old log files.
-* Uses MacOS Notification Center & Auto-Opens Logfile with Console.app.
+* Example Backup Script & LaunchAgent Template included in Documentation.
+* Uses MacOS Notification Center & Auto-Opens Logfile with Console.app when done.
+* Tested with DigitalOcean (Ubuntu) Droplet & DigitalOcean Spaces & MacOS Mojave 10.14.5
 
 Copy the repo to your local home folder and rename it 
 "**BackupTool**".
