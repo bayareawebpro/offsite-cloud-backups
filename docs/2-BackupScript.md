@@ -13,7 +13,7 @@ SNAPSHOTS_CONNECTION=mysetting-droplet
 SNAPSHOTS_DESTINATION=~/Backups/mysetting/snapshots
 
 # CDN Storage
-CDN_BUCKET=a1auto
+CDN_BUCKET=my-bucket
 CDN_CONNECTION=mysetting-spaces
 CDN_DESTINATION=~/Backups/mysetting/spaces
 
