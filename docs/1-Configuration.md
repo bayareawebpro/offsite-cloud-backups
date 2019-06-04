@@ -6,7 +6,7 @@ home directory (including local) so you can access mysql from the command line
 without a password.
 
 ## 2. MySql Commandline Access
-ServerPath: `/home/forge/.my.conf`
+Copy to ServerPath: `/home/forge/.my.conf`
 
 ```
 [mysql]
@@ -19,7 +19,7 @@ password = XXX
 ```
 
 ## 3. RClone Cloud Storage Utility
-LocalPath: `~/.config/rclone/rclone.conf`
+Copy to LocalPath: `~/.config/rclone/rclone.conf`
 
 Install RClone, and use the config generator, `rclone config` here's 
 an example of what it outputs:
