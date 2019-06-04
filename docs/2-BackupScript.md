@@ -23,8 +23,8 @@ startBackup
 
 # Handle Remote Dumps
 logger "Dumping Remote Databases..."
-ssh forge@hostname "bash -s" < ~/BackupTool/utilities/dump-database.sh staging
-ssh forge@hostname "bash -s" < ~/BackupTool/utilities/dump-database.sh production
+ssh forge@hostname "bash -s" < ~/BackupTool/utilities/dump-database.sh staging ${SNAPSHOTS_SOURCE}
+ssh forge@hostname "bash -s" < ~/BackupTool/utilities/dump-database.sh production ${SNAPSHOTS_SOURCE}
 
 # Run Backup
 runBackup

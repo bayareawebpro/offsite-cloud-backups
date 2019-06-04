@@ -1,6 +1,6 @@
 # LaunchAgent Installer Script:
-Usage: 
 
+Usage: 
 ```
 ~/BackupTool/install-launchagent.sh ~/BackupTool/com.digitalocean.backup.xml
 ```
