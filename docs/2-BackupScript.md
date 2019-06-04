@@ -1,20 +1,21 @@
 # Backup Script
 LocalPath: `~/BackupTool/scripts/com.hostname.backup.sh`
 
-The backup script declares the connections and paths to use with RClone defined in the previous step.
+This backup script declares the connections to use with RClone 
+(defined in previous step) and the source and destination paths.
 
 ```
 #!/usr/bin/env bash
 source ~/BackupTool/backup.sh
 
 # Database Snapshot Dumps
-SNAPSHOTS_SOURCE=/home/forge/snapshots
 SNAPSHOTS_CONNECTION=mysetting-droplet
+SNAPSHOTS_SOURCE=/home/forge/snapshots
 SNAPSHOTS_DESTINATION=~/Backups/mysetting/snapshots
 
 # CDN Storage
-CDN_BUCKET=my-bucket
 CDN_CONNECTION=mysetting-spaces
+CDN_BUCKET=my-bucket
 CDN_DESTINATION=~/Backups/mysetting/spaces
 
 # Create Log File & Notify
