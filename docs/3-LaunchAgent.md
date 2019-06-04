@@ -1,7 +1,11 @@
-# OSX LaunchAgent
-This section is for Mac Users.  You can use CronTab as an alternative.
+# LaunchAgent Installer Script:
+Usage: 
 
-## 1. Create a Launch Agent Source File (XML)
+```
+~/BackupTool/install-launchagent.sh ~/BackupTool/com.digitalocean.backup.xml
+```
+
+## Create a Launch Agent Source File (XML Below)
 LocalPath: `~/BackupTool/scripts/com.digitalocean.backup.xml`
 
 The "Label" key needs to match the filename.
@@ -71,12 +75,4 @@ The "Label" key needs to match the filename.
     </dict>
 </plist>
 
-```
-
-## Install LaunchAgent with Installer Script:
-
-Usage: 
-
-```
-~/BackupTool/install-launchagent.sh ~/BackupTool/com.digitalocean.backup.xml
 ```
