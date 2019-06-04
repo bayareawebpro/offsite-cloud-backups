@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Usage: backup.sh ./com.digitalocean.backup.sh
 export PATH=/usr/local/bin:$PATH
 
 # Databases
