@@ -15,6 +15,9 @@ can simply delete either set of variables to limit the script to one task.
 #!/usr/bin/env bash
 source ~/BackupTool/backup.sh
 
+# Notification Title
+NOTIFICATION_TITLE="CloudBackup"
+
 # Database Snapshot Dumps (primary task)
 SNAPSHOTS_CONNECTION=mysetting-droplet
 SNAPSHOTS_SOURCE=/home/forge/snapshots

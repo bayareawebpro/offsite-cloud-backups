@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 export PATH=/usr/local/bin:$PATH
 
+#NOTIFICATION_TITLE="DigitalOcean";
+
 # Databases
 #SNAPSHOTS_SOURCE=/home/forge/snapshots
 #SNAPSHOTS_CONNECTION=hostname-droplet
@@ -11,15 +13,20 @@ export PATH=/usr/local/bin:$PATH
 #CDN_CONNECTION=hostname-spaces
 #CDN_DESTINATION=~/Backups/hostname/spaces
 
+# Notification Title
+if [[ -z $NOTIFICATION_TITLE ]]; then
+    NOTIFICATION_TITLE="CloudBackup"
+fi
+
 # Logging
 TIMESTAMP=`date +"%Y-%m-%d@%I:%M%p"`
 LOG_DIRECTORY=~/BackupTool/logs
-LOG="$LOG_DIRECTORY/$TIMESTAMP.log"
+LOG="$LOG_DIRECTORY/$NOTIFICATION_TITLE-$TIMESTAMP.log"
 LOG_MAX=8
 
 # Write Log File & Notify User.
 function startBackup(){
-    osascript -e 'display notification "Cloud Backup Started." with title "DigitalOcean"'
+    osascript -e 'display notification "Cloud Backup Started." with title "'${NOTIFICATION_TITLE}'"'
     logger "===Cloud Backup $TIMESTAMP==="
 }
 
@@ -51,8 +58,7 @@ function runBackup(){
 
     # Add to Notifications Center.
     logger "Backup Completed Successfully."
-    osascript -e 'display notification "Cloud Backup Completed Successfully." with title "DigitalOcean"'
-
+    osascript -e 'display notification "Cloud Backup Completed Successfully." with title "'${NOTIFICATION_TITLE}'"'
     # Trim old log files.
     if [[ -d ${LOG_DIRECTORY} ]]; then
         cd ${LOG_DIRECTORY} && rm -f `ls -t | awk 'NR>'"$LOG_MAX"''`
