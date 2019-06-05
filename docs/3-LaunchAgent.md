@@ -2,7 +2,7 @@
 
 Usage: 
 ```
-~/BackupTool/install-launchagent.sh ~/BackupTool/com.digitalocean.backup.xml
+~/BackupTool/utilities/install-launchagent.sh ~/BackupTool/scripts/com.digitalocean.backup.xml
 ```
 
 ## Create a Launch Agent Source File (XML Below)
