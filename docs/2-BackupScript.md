@@ -15,8 +15,13 @@ can simply delete either set of variables to limit the script to one task.
 #!/usr/bin/env bash
 source ~/BackupTool/backup.sh
 
-# Notification Title
+# Notification Title / Logfile Name
 NOTIFICATION_TITLE="CloudBackup"
+
+# Logger (uncomment to override)
+#TIMESTAMP=`date +"%Y-%m-%d@%I:%M%p"`
+#LOG_DIRECTORY=~/BackupTool/logs
+#LOG_MAX=8
 
 # Database Snapshot Dumps (primary task)
 SNAPSHOTS_CONNECTION=mysetting-droplet

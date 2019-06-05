@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 export PATH=/usr/local/bin:$PATH
 
+# Notification Title / Logfile Name
 #NOTIFICATION_TITLE="DigitalOcean";
 
 # Databases
@@ -13,25 +14,28 @@ export PATH=/usr/local/bin:$PATH
 #CDN_CONNECTION=hostname-spaces
 #CDN_DESTINATION=~/Backups/hostname/spaces
 
-# Notification Title
-if [[ -z $NOTIFICATION_TITLE ]]; then
-    NOTIFICATION_TITLE="CloudBackup"
-fi
-
 # Logging
 TIMESTAMP=`date +"%Y-%m-%d@%I:%M%p"`
 LOG_DIRECTORY=~/BackupTool/logs
-LOG="$LOG_DIRECTORY/$NOTIFICATION_TITLE-$TIMESTAMP.log"
 LOG_MAX=8
+
+# Set Notification Title
+function setNotificationTitle(){
+    if [[ -z $NOTIFICATION_TITLE ]]; then
+        NOTIFICATION_TITLE="CloudBackup"
+    fi
+}
 
 # Write Log File & Notify User.
 function startBackup(){
+    setNotificationTitle
     osascript -e 'display notification "Cloud Backup Started." with title "'${NOTIFICATION_TITLE}'"'
-    logger "===Cloud Backup $TIMESTAMP==="
+    logger "===$NOTIFICATION_TITLE $TIMESTAMP==="
 }
 
 # Write Line to Log File.
 function logger(){
+    LOG="$LOG_DIRECTORY/$NOTIFICATION_TITLE-$TIMESTAMP.log"
     if [[ ! -f "$LOG" ]]; then
        touch ${LOG}
     fi
@@ -59,6 +63,7 @@ function runBackup(){
     # Add to Notifications Center.
     logger "Backup Completed Successfully."
     osascript -e 'display notification "Cloud Backup Completed Successfully." with title "'${NOTIFICATION_TITLE}'"'
+
     # Trim old log files.
     if [[ -d ${LOG_DIRECTORY} ]]; then
         cd ${LOG_DIRECTORY} && rm -f `ls -t | awk 'NR>'"$LOG_MAX"''`
