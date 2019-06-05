@@ -3,7 +3,7 @@
 Once you've configured and given your script a test run, you can then install it using the included LaunchAgent 
 Installer Utility. Use the example below to create a new XML template. 
 
-The XML template will be copied to a `.plist` in the  `~/Library/LaunchAgents/` directory. If installed successfully 
+Upon installation the XML template will be copied to a `.plist` in the  `~/Library/LaunchAgents/` directory. If installed successfully 
 the script will run as set by the `RunAtLoad` property.  This insures the script will run after installation or reboot 
 in addition to the defined schedule. For help generating schedules, use the 
 [launched.zerowidth.com](http://launched.zerowidth.com/) generator tool.
