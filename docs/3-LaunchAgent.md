@@ -9,6 +9,9 @@ If installed successfully the script will run as set by the `RunAtLoad`
 property.  This insures the script will run after installation or reboot 
 in addition to the defined schedule.
 
+For advanced usage, use [launched.zerowidth.com](http://launched.zerowidth.com/) 
+the online generator tool.
+
 Usage: 
 ```
 ~/BackupTool/utilities/install-launchagent.sh ~/BackupTool/scripts/com.digitalocean.backup.xml
