@@ -7,19 +7,23 @@ This backup script declares the connections to use with RClone
 ** Insure all directories and paths exist before running.  This script 
 does not create directories it only reads/writes to what's configured.
 
+This script is designed to sync directories from separate connections 
+(Droplet and CDN). The `SNAPSHOTS` and `CDN` connections are separate jobs. You 
+can simply delete either set of variables to limit the script to one task.
+
 ```
 #!/usr/bin/env bash
 source ~/BackupTool/backup.sh
 
-# Database Snapshot Dumps
+# Database Snapshot Dumps (primary task)
 SNAPSHOTS_CONNECTION=mysetting-droplet
 SNAPSHOTS_SOURCE=/home/forge/snapshots
 SNAPSHOTS_DESTINATION=~/Backups/mysetting/snapshots
 
-# CDN Storage
-CDN_CONNECTION=mysetting-spaces
-CDN_BUCKET=my-bucket
-CDN_DESTINATION=~/Backups/mysetting/spaces
+# CDN Storage (secondary task: uncomment if needed)
+# CDN_CONNECTION=mysetting-spaces
+# CDN_BUCKET=my-bucket
+# CDN_DESTINATION=~/Backups/mysetting/spaces
 
 # Create Log File & Notify
 startBackup
