@@ -1,14 +1,14 @@
 # Backup Script
-Copy to LocalPath: `~/BackupTool/scripts/com.hostname.backup.sh`
 
-The backup script declares the connections to use with RClone (defined in previous step) and the source and 
-destination paths. The script is designed to sync directories from separate connections (Droplet and CDN). 
-The `SNAPSHOTS` and `CDN` connections are separate jobs. You can simply delete either set of variables to limit 
-the script to one task.
+Each backup script you add declares the connections to use with RClone (defined in previous step) and the source and 
+destination paths. The "Backup Script Helper" `~/BackupTool/backup.sh` is designed to sync directories from separate 
+connections (Droplet and CDN). The `SNAPSHOTS` and `CDN` connections are separate jobs. You can simply delete either 
+set of variables to limit the script to one task.
 
 ** Insure all directories and paths exist before running.  This script does not create directories it only reads/writes 
 to what's configured.
 
+Copy to LocalPath: `~/BackupTool/scripts/com.hostname.backup.sh`
 ```
 #!/usr/bin/env bash
 
