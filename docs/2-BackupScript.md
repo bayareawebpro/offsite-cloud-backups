@@ -2,8 +2,11 @@
 
 Each backup script you add declares the connections to use with RClone (defined in previous step) and the source and 
 destination paths. The "Backup Script Helper" `~/BackupTool/backup.sh` is designed to sync directories from separate 
-connections (Droplet and CDN). The `SNAPSHOTS` and `CDN` connections are separate jobs. You can simply delete either 
+connections (Database Snapshots and CDN). The `SNAPSHOTS` and `CDN` connections are separate jobs. You can simply delete either 
 set of variables to limit the script to one task.
+
+The example below uses the included `dump-database.sh` script to add dumps using the naming convention 
+`dbname-latest.sql` prior to syncing the files. 
 
 ** Insure all directories and paths exist before running.  This script does not create directories it only reads/writes 
 to what's configured.
