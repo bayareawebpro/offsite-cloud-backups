@@ -19,7 +19,7 @@ Copy to LocalPath: `~/BackupTool/scripts/com.hostname.backup.sh`
 source ~/BackupTool/backup.sh
 
 # Notification Title / Logfile Name
-NOTIFICATION_TITLE="CloudBackup"
+TITLE="CloudBackup"
 
 # Logger (uncomment to override)
 # TIMESTAMP=`date +"%Y-%m-%d@%I:%M%p"`
