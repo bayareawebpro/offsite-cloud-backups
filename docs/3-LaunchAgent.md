@@ -1,5 +1,14 @@
 # LaunchAgent Installer Script:
 
+Once you've configured and given your script a test run, you can then install 
+it using the LaunchAgent Installer. Use the example below to create a new XML
+ template. When installed it will be copied to a `.plist` in the 
+ `~/Library/LaunchAgents/` directory.
+
+If installed successfully the script will run as set by the `RunAtLoad` 
+property.  This insures the script will run after installation or reboot 
+in addition to the defined schedule.
+
 Usage: 
 ```
 ~/BackupTool/utilities/install-launchagent.sh ~/BackupTool/scripts/com.digitalocean.backup.xml
