@@ -2,7 +2,7 @@
 export PATH=/usr/local/bin:$PATH
 
 # Notification Title / Logfile Name
-#TITLE="DigitalOcean";
+#NAME="DigitalOcean";
 
 # Databases
 #SNAPSHOTS_SOURCE=/home/forge/snapshots
@@ -21,14 +21,14 @@ LOG_MAX=8
 
 # Write Log File & Notify User.
 function startBackup(){
-    if [[ -z $TITLE ]]; then
-        TITLE="CloudBackup"
+    if [[ -z $NAME ]]; then
+        NAME="CloudBackup"
     fi
 
-    LOG="$LOG_DIRECTORY/$TITLE-$TIMESTAMP.log"
+    LOG="$LOG_DIRECTORY/$NAME-$TIMESTAMP.log"
 
-    osascript -e 'display notification "Cloud Backup Started." with title "'${TITLE}'"'
-    logger "===$TITLE $TIMESTAMP==="
+    osascript -e 'display notification "Cloud Backup Started." with title "'${NAME}'"'
+    logger "===$NAME $TIMESTAMP==="
 }
 
 # Write Line to Log File.
@@ -59,7 +59,7 @@ function runBackup(){
 
     # Add to Notifications Center.
     logger "Backup Completed Successfully."
-    osascript -e 'display notification "Cloud Backup Completed Successfully." with title "'${TITLE}'"'
+    osascript -e 'display notification "Cloud Backup Completed Successfully." with title "'${NAME}'"'
 
     # Trim old log files.
     if [[ -d ${LOG_DIRECTORY} ]]; then
