@@ -9,7 +9,7 @@ to a schedule.
 * Example Backup Script & LaunchAgent Template included in Documentation.
 * Uses MacOS Notification Center & Auto-Opens Logfile with Console.app when done.
 * Tested with DigitalOcean (Ubuntu) Droplet & DigitalOcean Spaces & MacOS Mojave 10.14.5
-* Supports most servers and cloud storage providers (See Rclone).
+* Supports most servers and cloud storage providers (See [Rclone Docs](https://rclone.org/docs/)).
 
 Copy the repo to your local home folder and rename it 
 "**BackupTool**".
