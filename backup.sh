@@ -19,23 +19,20 @@ TIMESTAMP=`date +"%Y-%m-%d@%I:%M%p"`
 LOG_DIRECTORY=~/BackupTool/logs
 LOG_MAX=8
 
-# Set Notification Title
-function setNotificationTitle(){
+# Write Log File & Notify User.
+function startBackup(){
     if [[ -z $NOTIFICATION_TITLE ]]; then
         NOTIFICATION_TITLE="CloudBackup"
     fi
-}
 
-# Write Log File & Notify User.
-function startBackup(){
-    setNotificationTitle
+    LOG="$LOG_DIRECTORY/$NOTIFICATION_TITLE-$TIMESTAMP.log"
+
     osascript -e 'display notification "Cloud Backup Started." with title "'${NOTIFICATION_TITLE}'"'
     logger "===$NOTIFICATION_TITLE $TIMESTAMP==="
 }
 
 # Write Line to Log File.
 function logger(){
-    LOG="$LOG_DIRECTORY/$NOTIFICATION_TITLE-$TIMESTAMP.log"
     if [[ ! -f "$LOG" ]]; then
        touch ${LOG}
     fi
