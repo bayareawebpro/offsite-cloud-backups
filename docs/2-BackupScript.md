@@ -18,7 +18,7 @@ Copy to LocalPath: `~/BackupTool/scripts/com.hostname.backup.sh`
 # Import Backup Script Helper
 source ~/BackupTool/backup.sh
 
-# Notification Title / Logfile Name
+# Notification & Logfile Name
 NAME="CloudBackup"
 
 # Logger (uncomment to override)
