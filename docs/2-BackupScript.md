@@ -5,7 +5,7 @@ This backup script declares the connections to use with RClone
 (defined in previous step) and the source and destination paths.
 
 ** Insure all directories and paths exist before running.  This script 
-does not create directories it only reads and write to what's configured.
+does not create directories it only reads/writes to what's configured.
 
 ```
 #!/usr/bin/env bash
