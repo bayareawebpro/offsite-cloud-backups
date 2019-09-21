@@ -46,7 +46,7 @@ function runBackup(){
         logger "SNAPSHOT Variables are not Configured."
     else
         logger "Synchronizing Database Snapshots..."
-        rclone sync ${SNAPSHOTS_CONNECTION}:${SNAPSHOTS_SOURCE} ${SNAPSHOTS_DESTINATION} >> ${LOG} 2>&1
+        rclone sync -v ${SNAPSHOTS_CONNECTION}:${SNAPSHOTS_SOURCE} ${SNAPSHOTS_DESTINATION} >> ${LOG} 2>&1
     fi
 
     # Synchronize CDN Files.
